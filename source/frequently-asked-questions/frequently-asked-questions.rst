@@ -69,6 +69,10 @@ Here are the possible ways to store ether:
 ##### Need help with thorough expert comments on these questions######
 
 * How will Ethereum deal with ever increasing blockchain size? It is currently a problem with Bitcoin, current blockchain is over 40GB and growing.
+[preliminary answer] Scalability is a major concern of the core developpers. There have been different proposals on how to achieve it. In the short to medium-term, the first step is switching to Casper, Ethereum's proof of stake (PoS) implementation; this should incentivize miners to focus more on getting better at executing smart contract fast, as well as increasing storage space -- which currently proof of work (PoW) doesn't do, since miners' sole incentive is to mine blocks faster, not to scale the network.
+Also, as it is the case with Bitcoin, not everybody needs to store the entire copy of the blockchain. The space of possibilities ranges from light-clients (which store the very minimum they need to -- for example to check an account's balance) to full-nodes, and anything in between (clients with tree-prunning -- storing only parts of the blockchain), etc.
+
+In the longer term, *sharding* has been proposed as a (potentially infinite) scaling solution. Implementation details and proof of concepts are still to be released.
 
 * How will Ethereum deal with centralisation of mining pools? This was a problem with BTC.
 
